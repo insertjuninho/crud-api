@@ -45,9 +45,9 @@ router.group("/public", router => {
     
     router.post('/register', auth.register);
     payload de registro: { "name": "name", "email":"email", "password":"passowrd" }
-   
-   router.post('/auth', auth.auth);
-   payload de login: { "email":"email", "password":"passowrd" }
+    
+    router.post('/auth', auth.auth);
+    payload de login: { "email":"email", "password":"passowrd" }
 
 });
 
@@ -58,7 +58,9 @@ router.group("/private", router => {
     router.post('/create',   controller.create);
     payload para criar as carta de natal: { "titulo":"titulo", "conteudo":"conteudo"}
     
+    Retorna todas as cartas cadastradas no banco
     router.get('/full',     controller.full);
+    
     router.put('/update',    controller.update);
     payload para alterar a carta de natal: {"id":"ido", "titulo":"titulo", "conteudo":"conteudo"}
     
@@ -66,6 +68,10 @@ router.group("/private", router => {
     Só passar o ID como parametro na parâmetro
 
 }).use(authMiddleware)
+
+## Banco
+
+Estou usando o MongoDB cloud, com isso não será necessário rodar o banco local
 
 
 <table>
