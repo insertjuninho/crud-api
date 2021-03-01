@@ -39,6 +39,35 @@ nodemon index
 * dotenv,
 * express-router-group
 
+## Routes
+
+router.group("/public", router => {
+    
+    router.post('/register', auth.register);
+    payload de registro: { "name": "name", "email":"email", "password":"passowrd" }
+   
+   router.post('/auth', auth.auth);
+   payload de login: { "email":"email", "password":"passowrd" }
+
+});
+
+### Para usar as routas "private" será necessário para o token jwt no Authotization
+
+router.group("/private", router => {
+
+    router.post('/create',   controller.create);
+    payload para criar as carta de natal: { "titulo":"titulo", "conteudo":"conteudo"}
+    
+    router.get('/full',     controller.full);
+    router.put('/update',    controller.update);
+    payload para alterar a carta de natal: {"id":"ido", "titulo":"titulo", "conteudo":"conteudo"}
+    
+    router.delete('/delete/:id', controller.delete);
+    Só passar o ID como parametro na parâmetro
+
+}).use(authMiddleware)
+
+
 <table>
   <tr>
     <td align="center">
