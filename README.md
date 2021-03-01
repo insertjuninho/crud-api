@@ -28,19 +28,8 @@
 nodemon index
 
 ```
-
-### Libs utilizadas
-
-* jsonwebtoken
-* body-parser,
-* cors,
-* express,
-* mongodb,
-* mongoose,
-* nodemon,
-* bcryptjs,
-* dotenv,
-* express-router-group
+## Iniciando o projeto Via Heroku
+link: https://apicrudrest.herokuapp.com/
 
 ## Routes
 
@@ -76,6 +65,18 @@ router.group("/private", router => {
 
 Estou usando o MongoDB cloud, com isso não será necessário rodar o banco local
 
+### Libs utilizadas
+
+* jsonwebtoken
+* body-parser,
+* cors,
+* express,
+* mongodb,
+* mongoose,
+* nodemon,
+* bcryptjs,
+* dotenv,
+* express-router-group
 
 <table>
   <tr>
