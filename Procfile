@@ -1,1 +1,1 @@
-web: src/node index
+web: node start
