@@ -43,7 +43,7 @@ router.group("/public", router => {
 
 });
 
-### Para usar as routas "private" será necessário para o token jwt no Authotization
+### Para usar as routas "private" será necessário usar o token jwt no Authotization
 
 router.group("/private", router => {
 
