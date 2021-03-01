@@ -6,7 +6,7 @@ const auth = require('../controller/authController')
 const authMiddleware = require('../middlewares/auth');
 
 router.get("/", (req, res) => {
-    res.send('SEJA BEM VINDO NA REST-CRUD, VOCÊ ESTÁ USANDO A VERSÃO V:1.0.0 E NO FUTURO NÂO TÂO DISTANTE IRÁ SUBIR NOVAS VERSÕES');
+    res.send('SEJA BEM VINDO A REST CRUD API, VOCÊ ESTÁ USANDO A VERSÃO V:1.0.0 E NO FUTURO NÂO TÂO DISTANTE IRÁ TER NOVAS VERSÕES');
 })
 router.group("/public", router => {
 
