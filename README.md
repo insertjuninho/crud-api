@@ -10,9 +10,9 @@
 
 -[X] Cadastro e login com JWT
 
--[] Aplicar teste TDD
+-[ ] Aplicar teste TDD
 
--[] Refatorar aplicando o TS
+-[ ] Refatorar aplicando o TS
 
 ## Iniciando o projeto LOCAL
 - Clone o repositório
