@@ -28,7 +28,7 @@
 nodemon index
 
 ```
-## Iniciando o projeto Via Heroku
+## Usando o projeto Via Heroku
 link: https://apicrudrest.herokuapp.com/
 
 ## Routes
