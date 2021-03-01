@@ -6,9 +6,12 @@
 
 ### Ajustes e melhorias
 
--[X] CRUD:(Create, release("Select"), Update e delete);
+-[X] CRUD:(Create, release("Select"), Update e delete)
+
 -[X] Cadastro e login com JWT
+
 -[] Aplicar teste TDD
+
 -[] Refatorar aplicando o TS
 
 ## Iniciando o projeto LOCAL
