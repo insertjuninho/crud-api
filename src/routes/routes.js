@@ -19,7 +19,7 @@ router.group("/private", router => {
 
     router.post('/create',   controller.create);
     router.get('/full',     controller.full);
-    router.put('/update',    controller.update);
+    router.put('/update/:id',    controller.update);
     router.delete('/delete/:id', controller.delete);
 
 }).use(authMiddleware)
