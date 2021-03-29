@@ -19,29 +19,28 @@ exports.full = async (req, res) => {
 }
 
  exports.update = async (req, res) => {
-    const { titulo, conteudo, id } = req.body;
-    let result = await carta.find()
-    result = result.find( r => r._id == req.body.id);
+    const { titulo, conteudo } = req.body;
+    let result = await carta.findById(req.params.id)
 
     try {
-           await carta.update({"_id":result._id},{$set: {"titulo":titulo, "conteudo":conteudo}});
-          res.json(result);
+           await carta.update({"_id": result._id}, {$set:{"titulo":titulo, "conteudo":conteudo}});
+          res.status(200).json(result);
           
       } catch (error) {
-            console.log(error)         
+         return res.send({
+                message: 'Não foi possível realizar as alterações'
+         })      
       }
 }
 
 exports.delete = async (req, res) => {
-     let id = req.params.id;
-
-       let result = await carta.find();
-       result = result.find( r => r._id == id);
    try {
-        let  del = await carta.remove({"_id":result._id});
-        console.log(del)
+        await carta.findByIdAndRemove(req.params.id).exec();
+     
         res.status(200).send('EXCLUIU COM SUCESSO');
    } catch (error) {
-       console.log(error)
+      return res.send(({
+          message: 'Não foi possível excluir a carta solicitada'
+      }))
    }
 }
